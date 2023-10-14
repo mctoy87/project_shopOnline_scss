@@ -1,0 +1,26 @@
+.breadcrumb {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+  margin-bottom: 80px;
+
+  &__item {
+    position: relative;
+    color: var(--5, #525252);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+
+    &:not(:last-of-type)::after {
+      position: absolute;
+      content: url(../images/keyboard_arrow_right.svg);
+      padding-left: 8px;
+      top: 2px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
+
+

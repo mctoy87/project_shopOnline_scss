@@ -1,0 +1,27 @@
+$color-primary: #2D2D2D;
+$color-secondary: #3670C7;
+$color-thirdy: #8F8F8F;
+$color-fourth: #EFEFEF;
+
+$text-color: #FFFFFF;
+
+$fonts: Lato;
+
+%imgProperty {
+  background: {
+    repeat: no-repeat;
+    // position: center;
+    size: contain;
+  }
+}
+
+@mixin font($name, $weight, $weightName) {
+  font: {
+    family: $name;
+    weight: $weight;
+    style: normal;
+    display: swap;
+  }
+  src: url('../fonts/lato-#{ $weightName }.woff2') format('woff2'),
+    url('../fonts/lato-#{ $weightName }.woff') format('woff');
+}

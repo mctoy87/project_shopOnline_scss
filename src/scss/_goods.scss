@@ -1,0 +1,377 @@
+.goods {
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  @media(max-width: 1280px) {
+    padding-top: 20px;
+  }
+
+  @media(max-width: 780px) {
+    padding-bottom: 30px;
+  }
+
+  @media(max-width: 480px) {
+    padding-top: 10px;
+    padding-bottom: 35px;
+  }
+  
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr repeat(2, 245px);
+    grid-template-rows: repeat(4, 245px);
+    grid-template-areas: 
+        "book time snickers presents presents"
+        "red_boot red_boot snickers tv tv"
+        "new_year new_year new_year girl chemical"
+        "new_year new_year new_year girl balls"
+    ;
+    gap: 60px;
+
+    @media(max-width: 1366px) {
+      grid-template-columns: repeat(4,  1fr);
+      grid-template-rows: repeat(6, 217px);
+      grid-template-areas: 
+      "book time snickers snickers " 
+      "red_boot red_boot snickers snickers" 
+      "presents presents girl chemical"
+      "tv tv girl balls"
+      "new_year new_year new_year new_year"
+      "new_year new_year new_year new_year"
+      ;
+      gap: 24px;
+    }
+
+    @media(max-width: 780px) {
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: 130px 118px 280px repeat(2, 118px) repeat(2, 130px) 123px;
+      grid-template-rows: repeat(8, 217px);
+      grid-template-areas: 
+      "book time"
+      "red_boot red_boot" 
+      "snickers snickers" 
+      "presents presents"
+      "tv tv"
+      "girl chemical"
+      "girl balls"
+      "new_year new_year"
+      ;
+      gap: 40px;
+    }
+
+    @media(max-width: 480px) {
+      grid-template-rows: 130px 118px 280px repeat(2, 118px) repeat(2, 130px) 123px;
+      gap: 20px;
+    }
+  }
+  /* общие стили для картинок в ul */
+  &__item {
+    position: relative;
+    // display: block;
+    // width: 100%;
+    // height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+
+    /* Общие стили для штампика со скидкой на картинке */
+    &:before {
+      position: absolute;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 130%;
+      text-align: center;
+    
+      bottom: 20px;
+      right: 27px;
+    
+      width: 88px;
+      height: 88px;
+      background-color: #FFBD13;
+      border-radius: 50%;
+      display: flex;              /*Выравнивает скидку внутри :before*/
+      justify-content: center;
+      align-items: center;
+
+      @media(max-width: 780px) {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+      }
+
+      @media(max-width: 480px) {
+        bottom: 5px;
+        right: 5px;
+      }
+    }
+
+    &_1{
+      background-image: url("../images/book.jpg");
+      grid-area: book;
+    }
+    
+    &_2 {
+      background-image: url("../images/clock.jpg");
+      grid-area: time;
+
+      &:before {
+        content: "-25%";
+      }
+    }
+
+    &_3 {
+      background-image: url("../images/red_snicker.jpg");
+      grid-area: red_boot;
+
+      &:before {
+        content: "-40%";
+        top: 20px;
+        left: 20px;
+
+        @media(max-width: 480px) {
+          top: 5px;
+          left: 5px;
+        }
+      }
+    }
+    
+    &_4 {
+      background-image: url("../images/snickers.jpg");
+      grid-area: snickers;
+    }
+    
+    &_5 {
+      background-image: url("../images/christmas_present.jpg");
+      grid-area: presents;
+    }
+    
+    &_6 {
+      background-image: url("../images/laptop.jpg");
+      grid-area: tv;
+
+      &:before {
+        content: "-15%";
+      }
+    }
+    
+    &_7 {
+      background-image: url("../images/2022.jpg");
+      grid-area: new_year;
+    }
+    
+    &_8 {
+      background-image: url("../images/girl.jpg");
+      grid-area: girl;
+
+      &:before {
+        content: "-55%";
+      }
+    }
+    
+    &_9 {
+      background-image: url("../images/chemicals.jpg");
+      grid-area: chemical;
+
+      &_:before {
+        content: "-25%";
+        top: 20px;
+        left: 20px;
+      }
+    }
+    
+    &_10 {
+      background-image: url("../images/christmas_balls.jpg");
+      grid-area: balls;
+    }
+  }
+  
+  /* общие стили для ссылок в ul */
+  &__link {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
+  
+  /* общие стили для текста в ul */
+  &__text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+
+    @media(max-width: 1366px) {
+      font-size: 30px;
+    }
+
+    @media(max-width: 780px) {
+      font-size: 26px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 12px;
+    }
+
+    &_bottom-30px {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      width: calc(100% - 60px);
+
+      @media(max-width: 480px) {
+        bottom: 16px;
+      }
+    }
+
+    &_fz30 {
+      font-size: 30px;
+
+      @media(max-width: 1366px) {
+        font-size: 24px;
+      }
+
+      @media(max-width: 780px) {
+        font-size: 16px;
+      }
+
+      @media(max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+
+    &_bottom-20px {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+
+      @media(max-width: 480px) {
+        bottom: 10px;
+        left: 10px;
+      }
+    }
+
+    &_blue {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 120%;
+
+      @media(max-width: 1366px) {
+        font-size: 30px;
+      }
+
+      @media(max-width: 780px) {
+        font-size: 12px;
+        padding: 9px 0;
+      }
+    }
+
+    &_red{
+      line-height: 120%;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: #F91155;
+    }
+  }
+  
+  &__text-span{
+    font-weight: 400;
+
+    @media(max-width: 480px) {
+      font-size: 12px;
+    }
+
+    &_bold-blue {
+      display: block;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 120%;
+
+      @media(max-width: 1366px) {
+        font-size: 40px;
+      }
+
+      @media(max-width: 780px) {
+        font-size: 16px;
+        display: inline;
+      }
+    }
+  }
+  
+  &__text-wrapper {
+    display: flex;
+    align-items: center;    
+    background-color: #38C0EB;
+    border-radius: 20px;    
+    padding: 0 20px;
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+
+    @media(max-width: 780px) {
+      border-radius: 8px;
+    }
+  }
+  
+  &__text-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 643px;
+    height: 108px;
+    background-color: #FFFFFF;
+    border-radius: 20px;    
+    text-align: center;
+
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+
+    @media(max-width: 1366px) {
+      height: 83px;
+      width: 513px;
+    }
+
+    @media(max-width: 780px) {
+      height: 50px;
+      width: calc(100% - 30px);
+      left: 15px;
+      right: 15px;
+      bottom: 26px;
+    }
+
+  }
+
+  /* стили для ссылок в айтемах в ul */
+  &__link_1 {
+    // padding: 90px 35px 27px 20px;
+  }
+
+  &__link_2 {
+    padding: 77px 0 0 14px;
+
+    @media(max-width: 480px) {
+      padding: 18px 0 0 10px;
+    }
+  }
+
+  &__link_4 {
+    // padding: 329px 20px 20px;
+  }
+
+  &__link_5 {
+    // padding: 94px 180px 0 30px;
+  }
+
+  &__link_6 {
+    // padding: 136px 0 0 30px;
+  }
+
+  &__link_7 {
+    // padding: 358px 0 0 50px;
+  }
+
+  &__link_9 {
+    // padding-left: 20px;
+  }
+}

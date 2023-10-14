@@ -1,0 +1,173 @@
+.sale {
+  padding-top: 50px;
+  padding-bottom: 140px;
+  color: $color-primary;
+
+  &__title {
+    font-size: 50px;
+    line-height: 130%; /* 65px */
+    margin-bottom: 50px;
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px 30px;
+
+    
+
+  }
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 420px;
+  position: relative;
+
+  @media(max-width: 1280px) {
+    flex-basis: 300px;
+  }
+
+  @media(max-width: 780px) {
+    flex-basis: 220px;
+  }
+
+  @media(max-width: 480px) {
+    flex-basis: 130px;
+  }
+
+  &:before {
+    position: absolute;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+  
+    color: $text-color;
+  
+    top: 187px;
+    left: 20px;
+  
+    width: 88px;
+    height: 88px;
+    background-color: #FFBD13;
+    border-radius: 50%;
+    display: flex;              /*Выравнивает скидку внутри :before*/
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 1280px) {
+      top: 100px;
+    }
+
+    @media(max-width: 780px) {
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      top: 80px;
+    }
+
+    @media(max-width: 480px) {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      top: 40px;
+      left: 5px;
+    }
+  }
+
+  &_1:before {
+    content: "-50%";
+  }
+  
+  &_2:before {
+    content: "-40%";
+  }
+  
+  &_3:before {
+    content: "-10%";
+  }
+  
+  &_4:before {
+    content: "-30%";
+  }
+  
+  &_5:before {
+    content: "-30%";
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    @media(max-width: 780px) {
+      margin-bottom: 15px;
+    }
+  }
+  
+  &__price {
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+
+    @media(max-width: 780px) {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    &_1:after {
+      content: '2598 ₽';
+    }
+    
+    &_2:after {
+      content: '5938 ₽';
+    }
+    
+    &_3:after {
+      content: '4490 ₽';
+    }
+    
+    &_4:after {
+      content: '6030 ₽';
+    }
+    
+    &_5:after {
+      content: '890 ₽';
+    }
+  }
+
+  &__price::after {
+    position: absolute;
+    
+    width: 64px;
+    height: 24px;
+    left: 117px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: line-through;
+  }
+
+  
+  &__text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+
+    @media(max-width: 780px) {
+      font-size: 18px;
+    }
+  }
+}
+
+
+
