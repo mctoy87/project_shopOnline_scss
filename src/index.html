@@ -7,7 +7,17 @@
     <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin> <!--Добавил предзагрузку шрифтов-->
     <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
     
-    <link rel="stylesheet" href="css/index.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const createLink = url => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = url;
+          document.head.append(link);
+        };
+        createLink('css/index.css');
+      })
+    </script>
     <script type="module" src="script/index.js"></script>
 
     <title>Онлайн магазин ShopOnline</title>
@@ -19,7 +29,7 @@
   <header class="header">
     <div class="container header__container">
       <h1 class="header__title visually-hidden">Главная страница онлайн магазина ShopOnline</h1>
-      <img class="header__logo" src="images/logo.png" alt="Логотип онлайн магазина">
+      <img class="header__logo" src="./images/logo.png" alt="Логотип онлайн магазина" width="190" height="41" loading="lazy">
       <button class="header__menu" aria-haspopup="true" aria-expanded="false">
         <svg class="header__menu-logo" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 12H6V10H0V12ZM0 0V2H18V0H0ZM0 7H12V5H0V7Z" fill="white"/>
@@ -202,56 +212,88 @@
       <ul class="sale__list" aria-label="Посмотреть все скидки">
         <li class="sale__img card  card_1">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/t-shirt.jpg" alt="Пара футболок белого цвета">
+            <picture>
+              <source srcset="images/t-shirt.avif" type="image/avif"> 
+              <source srcset="images/t-shirt.webp" type="image/webp">
+              <img class = "card__image" src="./images/t-shirt.jpg" alt="Пара футболок белого цвета" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_1">1299 ₽</p>
             <p class="card__text">Пара футболок</p>
           </a>
         </li>
         <li class="sale__img card card_2">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/boots_sale.jpg" alt="Кроссовки Nike Air белые с красной полосой">
+            <picture>
+              <source srcset="./images/boots_sale.avif" type="image/avif"> 
+              <source srcset="./images/boots_sale.webp" type="image/webp">
+              <img class = "card__image" src="./images/boots_sale.jpg" alt="Кроссовки Nike Air белые с красной полосой" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_2">2099 ₽</p>
             <p class="card__text">Кроссовки</p>
           </a>
         </li>
         <li class="sale__img card card_3">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/bed_sale.jpg" alt="Постельное белье белого цвета">
+            <picture>
+              <source srcset="./images/bed_sale.avif" type="image/avif"> 
+              <source srcset="./images/bed_sale.webp" type="image/webp">
+              <img class = "card__image" src="./images/bed_sale.jpg" alt="Постельное белье белого цвета" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_3">3902 ₽</p>
             <p class="card__text">Постельное белье</p>
           </a>
         </li>
         <li class="sale__img card card_4">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/fan.jpg" alt="Фен">
+            <picture>
+              <source srcset="./images/fan.avif" type="image/avif"> 
+              <source srcset="./images/fan.webp" type="image/webp">
+              <img class = "card__image" src="./images/fan.jpg" alt="Фен" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_4">2999 ₽</p>
             <p class="card__text">Фен</p>
           </a>
         </li>
         <li class="sale__img card card_3">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/bed_sale.jpg" alt="Постельное белье белого цвета">
+            <picture>
+              <source srcset="./images/bed_sale.avif" type="image/avif"> 
+              <source srcset="./images/bed_sale.webp" type="image/webp">
+              <img class = "card__image" src="./images/bed_sale.jpg" alt="Постельное белье белого цвета" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_3">3902 ₽</p>
             <p class="card__text">Постельное белье</p>
           </a>
         </li>
         <li class="sale__img card card_4">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/fan.jpg" alt="Фен">
+            <picture>
+              <source srcset="./images/fan.avif" type="image/avif"> 
+              <source srcset="./images/fan.webp" type="image/webp">
+              <img class = "card__image" src="./images/fan.jpg" alt="Фен" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_4">2999 ₽</p>
             <p class="card__text">Фен</p>
           </a>
         </li>
         <li class="sale__img card card_5">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/bears_sale.jpg" alt="Варежки-мишки">
+            <picture>
+              <source srcset="./images/bears_sale.avif" type="image/avif"> 
+              <source srcset="./images/bears_sale.webp" type="image/webp">
+              <img class = "card__image" src="./images/bears_sale.jpg" alt="Варежки-мишки" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_5">540 ₽</p>
             <p class="card__text">Варежки-мишки</p>
           </a>
         </li>
         <li class="sale__img card card_1">
           <a class = "card__link" href="#" aria-label="Перейти к товару">
-            <img class = "card__image" src="./images/t-shirt.jpg" alt="Пара футболок белого цвета">
+            <picture>
+              <source srcset="./images/t-shirt.avif" type="image/avif"> 
+              <source srcset="./images/t-shirt.webp" type="image/webp">
+              <img class = "card__image" src="./images/t-shirt.jpg" alt="Пара футболок белого цвета" width="420" height="295" loading="lazy">
+            </picture>
             <p class="card__price card__price_1">1299 ₽</p>
             <p class="card__text">Пара футболок</p>
           </a>
@@ -267,7 +309,7 @@
     
     <div class="footer__container-wrap">
       <div class="footer__logo-wrap">
-        <img class="footer__logo" src="images/logo-footer.png" alt="Логотип онлайн магазина">
+        <img class="footer__logo" src="images/logo-footer.png" alt="Логотип онлайн магазина" width="420" height="295" loading="lazy">
       </div>
 
       <div class="footer__catalog-wrap">
