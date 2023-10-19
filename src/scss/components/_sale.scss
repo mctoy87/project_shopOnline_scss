@@ -120,6 +120,10 @@
       font-size: 22px;
     }
 
+    @media(max-width: 480px) {
+      font-size: 16px;
+    }
+
     &_1:after {
       content: '2598 ₽';
     }
@@ -155,6 +159,16 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: line-through;
+
+    @media(max-width: 780px) {
+      left: 90px;
+      font-size: 16px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 12px;
+      left: 65px;
+    }
   }
 
   

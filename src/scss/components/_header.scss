@@ -144,6 +144,7 @@
     height: 54px;
     background-color: $color-secondary;
     border-radius: 30px;
+    border: none;
     
     @media(max-width: 768px) {
       height: 42px;
@@ -214,6 +215,7 @@
   &__item {
     width: max-content;
     text-align: center;
+    cursor: pointer;
 
     svg {
       @media(max-width: 768px) {

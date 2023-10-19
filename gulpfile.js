@@ -119,7 +119,7 @@ export const js = () => gulp
   .pipe(browserSync.stream());
 
 export const img = () => gulp
-  .src('src/images/**/*.{jpg, jpeg, png, svg, gif}')
+  .src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
   .pipe(gulpif(!dev, gulpImg({
     optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
     pngquant: ['--speed=1', '--force', 256],
@@ -133,7 +133,7 @@ export const img = () => gulp
   .pipe(browserSync.stream());
 
 export const webp = () => gulp
-  .src('src/images/**/*.{jpg, jpeg, png}')
+  .src('src/images/**/*.{jpg,jpeg,png}')
   .pipe(gulpWebp({
     quality: 60,
   }))
@@ -141,7 +141,7 @@ export const webp = () => gulp
   .pipe(browserSync.stream());
 
   export const avif = () => gulp
-  .src('src/images/**/*.{jpg, jpeg, png}')
+  .src('src/images/**/*.{jpg,jpeg,png}')
   .pipe(gulpAvif({
     quality: 50,
   }))

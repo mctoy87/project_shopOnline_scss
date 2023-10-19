@@ -7,7 +7,7 @@
   <link rel="prefetch" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
   
   <link rel="stylesheet" href="css/index.css">
-  <script type="module" src="./script/index.js"></script>
+  <script type="module" src="./script/index.min.js"></script>
   <title>Блог</title>
 </head>
 
@@ -61,6 +61,58 @@
       </nav>
     </div>
   </header>
+
+  <div class="modal modal_none">
+    <div class="modal__body">
+      <div class="modal__container container">
+        <h2 class="modal__title visually-hidden">Каталог, информация покупателям и обратная связь</h2>
+          
+        <div class="modal__catalog-wrap">
+            <h3 class="modal__catalog-title modal-paragrath" tabindex="0">Каталог</h3>
+            <ul class="modal__catalog catalog" id="modal-catalog">
+              <li class="catalog__item">
+                <a href="#" aria-label="Смартфоны">Смартфоны</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Бытовая химия">Бытовая химия</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Ноутбуки">Ноутбуки</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Книги и журнал">Книги и журналы</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Ювелирные изделия">Ювелирные изделия</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Домашний текстиль">Домашний текстиль</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Одежда">Одежда</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Электроника">Электроника</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Бытовая техника">Бытовая техника</a></li>
+              <li class="catalog__item">
+                <a href="#" aria-label="Косметика">Косметика</a></li>
+            </ul>
+          </div>
+    
+          <div class="modal__byer-info-wrap">
+            <h3 class="modal__byer-info-title modal-paragrath" tabindex="0">Покупателям</h3>
+            <ul class="modal__byer-info byer-info">
+              <li class="byer-info__item">
+                <a href="#" aria-label="Оплата заказа">Оплата заказа</a></li>
+              <li class="byer-info__item">
+                <a href="#" aria-label="Условия доставки">Условия доставки</a></li>
+              <li class="byer-info__item">
+                <a href="#" aria-label="Условия возврата заказа">Условия возврата заказа</a></li>
+              <li class="byer-info__item">
+                <a href="./blog.html" aria-label="Блог">Блог</a></li>
+            </ul>
+          </div>
+    
+          <div class="modal__contacts-wrap">
+            <h3 class="modal__contacts-title modal-paragrath" tabindex="0">Контакты</h3>  
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="page">
     <div class="container">
