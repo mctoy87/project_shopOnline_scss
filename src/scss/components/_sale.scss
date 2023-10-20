@@ -183,5 +183,20 @@
   }
 }
 
+.page-sale {
+  color: $color-primary;
+  padding-top: 50px;
+
+  &__title{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 130%; /* 65px */
+  }
+
+  &__list {
+    display: flex;
+  }
+}
+
 
 
