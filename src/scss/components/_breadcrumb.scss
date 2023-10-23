@@ -4,6 +4,15 @@
   align-items: center;
   margin-bottom: 80px;
 
+  @media(max-width: 1280px) {
+    margin-bottom: 60px;
+  }
+
+  @media(max-width: 480px) {
+    gap: 23px;
+    margin-bottom: 30px;
+  }
+
   &__item {
     position: relative;
     color: var(--5, #525252);
@@ -11,15 +20,37 @@
     font-weight: 700;
     line-height: 130%; /* 20.8px */
 
+    @media(max-width: 780px) {
+      font-size: 14px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 8px;
+    }
+
     &:not(:last-of-type)::after {
       position: absolute;
-      content: url('../images/keyboard_arrow_right.svg');
+      content: "";
+      background: {
+        image: url('../images/keyboard_arrow_right.svg');
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+      }
       padding-left: 8px;
-      top: 2px;
+      right: -25px;
       height: 18px;
       width: 18px;
+
+      @media(max-width: 480px) {
+        right: -15px;
+        height: 11px;
+        width: 11px;
+      }
     }
   }
+
+
 }
 
 

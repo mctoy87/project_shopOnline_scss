@@ -15,7 +15,14 @@
     justify-content: space-between;
     gap: 50px 30px;
 
-    
+    // для page-list - дубликат блока
+    &_none {
+      display: none;
+
+      @media(max-width: 1280px) {
+        display: flex;
+      }
+    }
 
   }
 }
@@ -183,20 +190,86 @@
   }
 }
 
-.page-sale {
-  color: $color-primary;
-  padding-top: 50px;
+.page{
+  &-sale {
+    color: $color-primary;
+    padding-top: 50px;
 
-  &__title{
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 130%; /* 65px */
+    @media(max-width: 480px) {
+      padding-top: 25px;
+    }
+
+
+    &__title{
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 130%; /* 65px */
+      margin-bottom: 30px;
+
+      @media(max-width: 1280px) {
+        font-size: 30px;
+      }
+  
+      @media(max-width: 480px) {
+        font-size: 20px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 30px;
+
+      @media(max-width: 1280px) {
+        display: none;
+      }
+
+    }
   }
 
-  &__list {
+  &-card {
     display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    position: relative;
+
+    &::before{
+      position: absolute;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 130%;
+      text-align: center;
+      color: #fff;
+      top: 110px;
+      left: 20px;
+      width: 88px;
+      height: 88px;
+      background-color: #ffbd13;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_4::before{
+      content: "-10%";
+    }
+
+
+
+    &__text {
+      font-size: 22px;
+      line-height: 150%;
+    }
+
+    &__price {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
   }
 }
+
+
 
 
 
