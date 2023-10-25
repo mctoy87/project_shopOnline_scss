@@ -7,6 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserslist": [
+    "cover 99.5%",
+    "not IE 11"
+  ],
   "author": "Andrey Kotelnikov",
   "license": "ISC",
   "devDependencies": {
@@ -17,6 +21,7 @@
     "critical": "^6.0.4",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-avif": "^1.1.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cssimport": "^7.0.0",
