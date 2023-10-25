@@ -67,17 +67,6 @@ const setTimer = deadline => {
     return {timeRemaining, days, minutes, hours};
   };
 
-  // меняет формат таймера (цвет)
-  // const setStyleTimer = (days, hours) => {
-  //   if (days === 0 && hours < 24) {
-  //     timerBlock.style.backgroundColor = 'red';
-  //     timerText.style.backgroundColor = 'red';
-  //   } else {
-  //     timerBlock.style.backgroundColor = 'green';
-  //     timerText.style.backgroundColor = 'green';
-  //   }
-  // };
-
   /* Замена кода изменения цвета (оставил только красный) */
   const setStyleTimer = (days, hours) => {
     if (days === 0 && hours < 24) {
@@ -121,7 +110,6 @@ const setTimer = deadline => {
 // запуск плагина таймера
 // Находит датасет атрибут и запускает таймер по нему
 document.addEventListener('DOMContentLoaded', () => {
-  // console.log('DOM LOAD');
   const serchElem = document.querySelector('[data-deadline]');
   if (serchElem) setTimer(timerBlock.dataset.deadline);
 });

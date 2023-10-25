@@ -51,9 +51,7 @@ const createPostNav = async () => {
   const pagination = await getPostData();
   let postNav = '';
 
-  // let counter = 0;
   for (let i = 1; i < pagination.pagination.pages; i++) {
-    // if (counter < 3) {
     postNav += `
     <li class="nav__item">
       <a href="blog.html?page=${i}" class="nav__link">
@@ -61,17 +59,6 @@ const createPostNav = async () => {
       </a>
     </li>
     `;
-    // } else {
-    //   postNav += `
-    //   <li class="nav__item visually-hidden">
-    //     <a href="blog.html?page=${i}" class="nav__link">
-    //       ${i}
-    //     </a>
-    //   </li>
-    //   `;
-    // }
-
-    // counter += 1;
     navList.innerHTML = postNav;
     navList.style.overflow = 'auto';
   }

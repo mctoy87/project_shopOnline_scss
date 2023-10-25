@@ -1,11 +1,4 @@
 const postPage = document.querySelector('.article__wrapper-text');
-
-// export const loadArticles = async (url = 'https://gorest.co.in/public-api/posts') => {
-//   const result = await fetch(url);
-//   const data = await result.json();
-//   return data;
-// };
-
 const pageParams = new URLSearchParams(window.location.search);
 const postId = pageParams.get('id');
 
@@ -22,8 +15,6 @@ const createPostPage = async () => {
   /* Запрос автора конкретного поста по userid */
   const responseIdUser = await fetch(`https://gorest.co.in/public-api/users/${result.data.user_id}`);
   const userId = await responseIdUser.json();
-  // console.log('userId :', userId);
-  // console.log('userId.Data :', userId.data.message === 'Resource not found');
 
   /* Рендер конкретного поста */
   postContent = `
